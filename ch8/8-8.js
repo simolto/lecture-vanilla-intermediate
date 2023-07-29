@@ -19,3 +19,6 @@ Porto Alegre, Brazil, +55 51 3079 3550\n
 Chennai, India, +91 44 660 44766`
 const result = acquireData(input)
 console.log(result)
+
+// 현재 웹 개발에서는 Git과 같은 버전 관리 시스템을 활용하기에 주석 처리가 불필요할 수도
+//  사용하지 않는 코드는 과감히 지우도록 할 것
