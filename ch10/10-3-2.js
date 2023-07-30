@@ -1,11 +1,13 @@
 export function adjustedCapital(instrument) {
-  let result = 0
-  if (instrument.capital > 0) {
-    if (instrument.interestRate > 0 && instrument.duration > 0) {
-      result =
-        (instrument.income / instrument.duration) *
-        anInstrument.adjustmentFactor
-    }
-  }
-  return result
+  return isEligibleForAdjustedCapital(instrument)
+    ? (instrument.income / instrument.duration) * anInstrument.adjustmentFactor
+    : 0
+}
+
+function isEligibleForAdjustedCapital(instrument) {
+  return (
+    instrument.capital > 0 &&
+    instrument.interestRate > 0 &&
+    instrument.duration > 0
+  )
 }
